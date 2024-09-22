@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>个人博客封面</title>
-<style>
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: aquamarine no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.center-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 84px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  transition: font-size 0.3s ease;
-}
-
-.center-text:hover {
-  font-size: 30px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixeng's Blog</title>
+    <link rel="stylesheet" href="js/styles.css">
 </head>
 <body>
-<div class="center-text" onclick="location.href='css/文章.html'">点击进入我的博客</div>
+    <header>
+        <h1>mixeng's Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="js/生活.html">生活</a></li>
+                <li><a href="#talks">说说</a></li>
+                <li><a href="#archives">归档</a></li>
+                <li><a href="#about">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>小窝公告栏</h2>
+            <p>学业繁忙，随缘打理</p>
+            <!-- 更多内容 -->
+        </section>
+        <section id="articles">
+            <h2>文章列表</h2>
+            <!-- 文章列表 -->
+        </section>
+        <section id="talks">
+            <h2>说说</h2>
+            <!-- 说说列表 -->
+        </section>
+        <section id="archives">
+            <h2>归档</h2>
+            <!-- 归档列表 -->
+        </section>
+        <section id="about">
+            <h2>关于我</h2>
+            <div class="author-info">
+                <img src="img/ibjnqvs8.bmp" alt="博客主人头像" class="avatar">
+                <h3>网名：zhouser</h3>
+            </div>
+            <!-- 个人简介 -->
+        </section>
+    </main>
+    <footer>
+        <p>版权所有 &copy; 2024 mixeng's Blog</p>
+    </footer>
+    <!-- 页面宠物 -->
+    <div class="pet" id="pet">
+        <img src="img/ibjnqvs8.bmp" alt="页面宠物">
+    </div>
 </body>
 </html>
