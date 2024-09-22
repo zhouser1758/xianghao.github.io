@@ -3,33 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Full Screen Image with Text</title>
+<title>个人博客封面</title>
 <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        display: flex;
-        align-items:auto;
-        
-        
-        background: url(img/背景.png) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        color: white;
-        font-size: 5px;
-        font-weight: bold;
-    }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: aquamarine no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 84px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+.center-text:hover {
+  font-size: 30px;
+}
 </style>
 </head>
 <body>
-    <div>
-    	<p>这个有点简陋</p>
-        <p>等我学会前端代码了搭建一个牛逼的</p>
-        <p ><a href="css/文章.html">来看看博客吧  </a></p>
-        
-    </div>
+<div class="center-text" onclick="location.href='css/文章.html'">点击进入我的博客</div>
 </body>
 </html>
