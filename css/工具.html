@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DES自动加解密程序</title>
+<style>
+    body { font-family: Arial, sans-serif; }
+    .container { width: 600px; margin: 0 auto; padding: 20px; }
+    .input-group { margin-bottom: 20px; }
+    .input-group label { display: block; margin-bottom: 5px; }
+    .input-group input { width: 100%; padding: 10px; }
+    .button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    #result { margin-top: 20px; font-weight: bold; }
+    #sushi { width: 100px; height: auto; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>DES自动加解密程序</h1>
+    <form id="encryptForm">
+        <div class="input-group">
+            <label for="plaintext">明文</label>
+            <input type="text" id="plaintext" name="plaintext">
+        </div>
+        <div class="input-group">
+            <label for="key">密钥（8字节）</label>
+            <input type="text" id="key" name="key">
+        </div>
+        <button class="button" type="button" onclick="encrypt()">加密</button>
+    </form>
+    <form id="decryptForm">
+        <div class="input-group">
+            <label for="ciphertext">密文</label>
+            <input type="text" id="ciphertext" name="ciphertext">
+        </div>
+        <div class="input-group">
+            <label for="key">密钥（8字节）</label>
+            <input type="text" id="key" name="key">
+        </div>
+        <button class="button" type="button" onclick="decrypt()">解密</button>
+    </form>
+    <div id="result"></div>
+    <img id="sushi" src="img/私密马赛.jpg" alt="私密马赛">
+</div>
+<script>
+    function encrypt() {
+        // 这里应该实现加密逻辑，但这里只是一个示例
+        var plaintext = document.getElementById('plaintext').value;
+        var key = document.getElementById('key').value;
+        // 假设加密后的结果是明文的反转
+        var encryptedText = plaintext.split('').reverse().join('');
+        document.getElementById('ciphertext').value = encryptedText;
+        document.getElementById('result').innerText = "加密结果: " + encryptedText;
+    }
+
+    function decrypt() {
+        // 这里应该实现解密逻辑，但这里只是一个示例
+        var ciphertext = document.getElementById('ciphertext').value;
+        var key = document.getElementById('key').value;
+        // 假设解密后的结果是密文的反转
+        var decryptedText = ciphertext.split('').reverse().join('');
+        document.getElementById('plaintext').value = decryptedText;
+        document.getElementById('result').innerText = "解密结果: " + decryptedText;
+    }
+
+    // 显示图片
+    var sushiImage = document.getElementById('sushi');
+    sushiImage.style.display = 'block';
+</script>
+</body>
+</html>
