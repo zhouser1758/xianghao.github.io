@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Effect</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #06252e;
+        }
+        
+        button {
+            padding: 12px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 24px;
+            background: linear-gradient(to bottom, #3498db, #9b59b6);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .box {
+            width: 100%;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0,0,0,0.2));
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 96px;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 76px;
+            outline: none;
+            --c: lightseagreen;
+            text-shadow: 0 0 10px var(--c),
+                         0 0 20px var(--c),
+                         0 0 40px var(--c),
+                         0 0 80px var(--c),
+                         0 0 160px var(--c);
+            animation: animate 5s linear infinite;
+        }
+        
+        @keyframes animate {
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">请点这里</button>
+    <div class="box">
+        <h1 id="displayText">吃的什么？</h1>
+    </div>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            this.remove();
+            document.getElementById('displayText').textContent = '给我看看，我也想吃';
+        });
+    </script>
+</body>
+</html>
